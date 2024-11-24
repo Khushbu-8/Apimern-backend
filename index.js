@@ -15,8 +15,6 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
     credentials: true // Allow credentials
-
-
 }));
 
 // Middleware to parse JSON and URL-encoded data

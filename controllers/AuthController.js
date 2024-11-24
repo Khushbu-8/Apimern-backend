@@ -24,7 +24,7 @@ const viewUser = async(req,res) =>{
     try {
         const users = await UserModel.find({});
         // console.log(users); 
-      return  res.status(200).send({
+      return  res.status(200).json({
             success : true,
             message : "Users Fetched Successfully",
             users
@@ -34,7 +34,7 @@ const viewUser = async(req,res) =>{
         
         
     } catch (error) {
-        res.status(500).send({
+        res.status(500).json({
             success : false,
             message : error
             })
