@@ -6,7 +6,7 @@ const port = process.env.PORT ;
 connectDB()
 const cors = require('cors')
 app.use(cors({
-    origin: [""],
+    origin: ["https://apimern-frontend.vercel.app"],
     methods: ["GET", "POST","DELETE","PUT"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
