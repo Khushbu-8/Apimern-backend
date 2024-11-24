@@ -2,7 +2,6 @@ const express = require("express");
 const connectDB = require("./config/db");
 require("dotenv").config();
 const cors = require('cors');
-
 const app = express();
 const port = process.env.PORT;
 
@@ -11,12 +10,11 @@ connectDB();
 
 // CORS configuration
 app.use(cors({
-    origin: ['https://apimern-frontend.vercel.app'], // Allow this origin
+    origin: 'https://apimern-frontend.vercel.app/', // Allow this origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
-    credentials: true // Allow credentials
+    credentials: true // If you need to include credentials (like cookies)
 }));
-
 // Middleware to parse JSON and URL-encoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
