@@ -13,7 +13,10 @@ connectDB();
 app.use(cors({
     origin: ['https://apimern-frontend.vercel.app'], // Allow this origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
     credentials: true // Allow credentials
+
+
 }));
 
 // Middleware to parse JSON and URL-encoded data
