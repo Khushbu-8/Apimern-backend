@@ -2,20 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "package.json",
-        "use": "@vercel/static-build"
+        "src": "index.js",
+        "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "/api/$1" 
+        "src": "/(.*)",
+        "dest": "/" 
       }
-    ],
-    "env": {
-      "REACT_APP_API_URL": "https://apimern-backend.vercel.app/api/v1" 
-    },
-    "static": {
-      "directory": "build"
-    }
+    ]
   }
